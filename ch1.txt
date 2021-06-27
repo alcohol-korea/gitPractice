@@ -1,4 +1,4 @@
-1. repository: git folder
+1. repository: git 폴더
 2. commits: 어느 시간떄 어느것이 수정 되었는지 알기위해서 하는 것이다.
 - 변경 사항들이 저장되는 시간과 같이 돤다
     -변경사항이 많으면 많은 commit이 있을 수 도 있다.
