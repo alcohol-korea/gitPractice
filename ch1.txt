@@ -1,12 +1,61 @@
-1. repository: git 폴더
-2. commits: 어느 시간떄 어느것이 수정 되었는지 알기위해서 하는 것이다.
-- 변경 사항들이 저장되는 시간과 같이 돤다
-    -변경사항이 많으면 많은 commit이 있을 수 도 있다.
-- commit을 했을떄 무엇을 수정 했는지 알기위해서 
-    -제목은 필수다
--수정했을떄
-    -노란색 원과 사각형이 함께 있고
--수정되면
-    -빨강색으로 변한다.
-3. branches
-* 독립적으로 어떤작업 진행
+1. repository
+    : git 폴더
+2. commits
+    : 어느 시간떄 어느것이 수정 되었는지 알기위해서 하는 것이다.
+        - 변경 사항들이 저장되는 시간과 같이 돤다
+            -변경사항이 많으면 많은 commit이 있을 수 도 있다.
+        - commit을 했을떄 무엇을 수정 했는지 알기위해서 
+            -제목은 필수다
+        - 수정했을떄
+            -노란색 원과 사각형이 함께 있고
+        - 수정되면
+            -초록색으로 변한다.
+3. Area
+(1) working Area
+    :vscode
+(2) staging Area
+    :commit 되기전에 수정된 것들을 staging Area에 넣을건지 결정 후
+    commit되는 것은 하고 아니면 delete함
+(3) repository Area
+    :History에 나오는 것
+        누가 무엇을 언제 어떻게 수정 했는지가 나옴
+4. branches
+    :독립적으로 기본작업의 추가작업을 진행가능
+        (1) 특징
+            - 각 branches는 서로 영향을 주지 않는다.
+            - 여러작업을 동시에 할 수 있다.
+            - branches 생성시 master branch의 모든 history를 가지고 시작한다
+
+        (2) branches에 정보추가
+
+            (2)-1 정보추가
+                
+                master branch의 정보를 가지고 정보를 추가하여
+                commit하면 main branch는 뜨지않고 해당 branch만 뜬다.
+            
+            (2)-2 공통 수정
+                : mater branch에서 수정한것들 branches 공통 수정
+
+                1. 해당 branch를 연다
+                2. 'branch'에서 'update from main'을 클릭하면
+                3. 다른 branch들도 공통 수정이 가능하다.
+
+        (3) merging
+
+            (3)-1 방법
+
+                 1. main branch를 연다
+                 2. 'branch'를 클릭한다
+                 3. 'merge into current branches'를 클릭한다.
+                 4. branch들중 결정
+                 5. 'create a merge commit'을 클릭한다.
+        
+            (3)-2 conflict
+                : master branch와 branches가 수정한 line이 같은 line일떄, main에 merge하면 발생
+
+                - 현재 변경사항 : main branch에서 수정한 것
+                - 수신 변경사항 : merge 하고싶은 branch에서 수정한 것
+
+                -vscode에서는
+                    current change (현재) | incomming change (수신) | both (둘다 -> 보기 않좋음) | compare
+                    -> 현재 수신 2개중 하나 고르기 
